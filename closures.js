@@ -212,10 +212,12 @@ function secretNumber() {
 
 function timeOutCounter() {
   for (var i = 0; i <= 5; i++) {
-    let j = i
-    setTimeout(function() {
-      console.log(j);
-    }, j * 1000);
+    function test(index){
+      setTimeout(function() {
+        console.log(index);
+      }, i * 1000);
+    }
+    test(i)
   }
 }
 timeOutCounter();
